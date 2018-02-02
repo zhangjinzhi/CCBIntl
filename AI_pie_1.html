@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>人工智能项目地区分布</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+  <script src="./layui/layui.all.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <!--<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+  <!--<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+
+  <!-- Custom styles for this template -->
+  <link href="bootstrap/css/carousel.css" rel="stylesheet">
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="bootstrap/js/jquery-slim.min.js"><\/script>')</script>
+  <script src="bootstrap/js/popper.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  <script src="bootstrap/js/holder.min.js"></script>
+  <script src="bootstrap/js/echarts.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="index.html">返回首页</a>
+                <a class="navbar-brand" href="project_summary.html">上一页</a>
+                <a class="navbar-brand" href="AI_pie_2.html">下一页</a>
+        </nav>
+      </header>
+
+    <div style="width: 80%; margin: auto; position:absolute; left:0; right:0 ;">
+
+        <h4 style="margin: 3% 0px 4% 0px;width:100%">人工智能项目地区分布</h4>
+   <div class="row">
+        <!--<div style="width:60%; float:left; margin: 4% 0px 0px 0px;">-->
+    <div class="col-md-4">
+            <div style="width:100%; float:left;margin: 0px 1% 0px 0px; ">
+                <table id="table_1" class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td colspan="4">地区分布</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">境内</td>
+                        </tr>
+                        <tr>
+                            <td style="width:30%">北京市</td>
+                            <td style="width:20%">417</td>
+                            <td style="width:30%">重庆市</td>
+                            <td style="width:20%">9</td>
+                        </tr>
+                        <tr>
+                            <td>广东省</td>
+                            <td>195</td>
+                            <td>江西省</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>上海市</td>
+                            <td>185</td>
+                            <td>湖南省</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>浙江省</td>
+                            <td>90</td>
+                            <td>云南省</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>江苏省</td>
+                            <td>59</td>
+                            <td>山西省</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>四川省</td>
+                            <td>29</td>
+                            <td>黑龙江</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>福建省</td>
+                            <td>21</td>
+                            <td>吉林省</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>湖北省</td>
+                            <td>18</td>
+                            <td>新疆</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>陕西省</td>
+                            <td>16</td>
+                            <td>广西省</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>山东省</td>
+                            <td>12</td>
+                            <td>河北省</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>天津市</td>
+                            <td>11</td>
+                            <td>海南省</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>安徽省</td>
+                            <td>10</td>
+                            <td>贵州省</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>河南省</td>
+                            <td>10</td>
+                            <td>其他</td>
+                            <td>53</td>
+                        </tr>
+                        <tr>
+                            <td>辽宁省</td>
+                            <td>9</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">总计</td>
+                            <td colspan="2">1171</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+     </div>
+     <div class="col-md-4">
+            <div style="width:100%; float: right; ">
+
+                <table id="table_2" class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td colspan="4">境外</td>
+                        </tr>
+                        <tr>
+                            <td style="width:30%">美国</td>
+                            <td style="width:20%">304</td>
+                            <td style="width:30%">韩国</td>
+                            <td style="width:20%">4</td>
+                        </tr>
+                        <tr>
+                            <td>英国</td>
+                            <td>40</td>
+                            <td>澳大利亚</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>以色列</td>
+                            <td>34</td>
+                            <td>爱尔兰</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>印度</td>
+                            <td>25</td>
+                            <td>丹麦</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>法国</td>
+                            <td>13</td>
+                            <td>保加利亚</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>德国</td>
+                            <td>11</td>
+                            <td>匈牙利</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>日本</td>
+                            <td>8</td>
+                            <td>印度尼西亚</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>香港</td>
+                            <td>8</td>
+                            <td>土耳其</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>新加坡</td>
+                            <td>7</td>
+                            <td>塞浦路斯</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>加拿大</td>
+                            <td>6</td>
+                            <td>奥地利</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>台湾</td>
+                            <td>6</td>
+                            <td>希腊</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>荷兰</td>
+                            <td>5</td>
+                            <td>意大利</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>俄罗斯</td>
+                            <td>4</td>
+                            <td>挪威</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>瑞典</td>
+                            <td>4</td>
+                            <td>新西兰</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>西班牙</td>
+                            <td>4</td>
+                            <td>海外其他</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">总计</td>
+                            <td colspan="2">502</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+     </div>
+        <!--</div>-->
+
+     <div class="col-md-4">
+        <div style="width: 100%; float: left">
+            <div id="chart" style="width: 500px;height:400px;"></div>
+            <div id="chart2" style="width: 500px;height:400px;"></div>
+        </div>
+     </div>
+    </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+
+        myChart = echarts.init(document.getElementById('chart'));
+        option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b}: {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'right',
+                y: 'center',
+                data: ['北京市', '广东省', '上海市', '浙江省', '江苏省', "四川省", '福建省', '湖北省', '陕西省', '山东省', "天津市", '安徽省']
+            },
+            series: [
+                {
+                    name: '境内项目分布',
+                    type: 'pie',
+                    radius: ['50%', '70%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '30',
+                                fontWeight: 'bold'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [
+                        { value: 417, name: '北京市' },
+                        { value: 195, name: '广东省' },
+                        { value: 185, name: '上海市' },
+                        { value: 90, name: '浙江省' },
+                        { value: 59, name: '江苏省' },
+                        { value: 29, name: '四川省' },
+                        { value: 21, name: '福建省' },
+                        { value: 18, name: '湖北省' },
+                        { value: 16, name: '陕西省' },
+                        { value: 12, name: '山东省' },
+                        { value: 11, name: '天津市' },
+                        { value: 10, name: '安徽省' },
+                        { value: 10, name: '河南省' },
+                        { value: 9, name: '辽宁省' },
+                        { value: 9, name: '重庆市' },
+                        { value: 6, name: '江西省' },
+                        { value: 4, name: '湖南省' },
+                        { value: 3, name: '云南省' },
+                        { value: 3, name: '山西省' },
+                        { value: 3, name: '黑龙江' },
+                        { value: 2, name: '吉林省' },
+                        { value: 2, name: '新疆' },
+                        { value: 1, name: '广西省' },
+                        { value: 1, name: '河北省' },
+                        { value: 1, name: '海南省' },
+                        { value: 1, name: '贵州省' },
+                        { value: 53, name: '其他' },
+                    ]
+                }
+            ]
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+        // 图例开关的行为只会触发 legendselectchanged 事件
+        myChart.on('mouseover', function (params) {
+            // 在控制台中打印
+            console.log(params.name);
+        });
+
+
+        myChart2 = echarts.init(document.getElementById('chart2'));
+        option2 = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b}: {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'right',
+                y: 'center',
+                data: ['美国', '英国', '以色列', '印度', '法国', "德国", '日本', '香港']
+            },
+            series: [
+                {
+                    name: '境外项目分布',
+                    type: 'pie',
+                    radius: ['50%', '70%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '30',
+                                fontWeight: 'bold'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [
+                        { value: 304, name: '美国' },
+                        { value: 40, name: '英国' },
+                        { value: 34, name: '以色列' },
+                        { value: 25, name: '印度' },
+                        { value: 13, name: '法国' },
+                        { value: 11, name: '德国' },
+                        { value: 8, name: '日本' },
+                        { value: 8, name: '香港' },
+                        { value: 7, name: '新加坡' },
+                        { value: 6, name: '加拿大' },
+                        { value: 6, name: '台湾' },
+                        { value: 5, name: '荷兰' },
+                        { value: 4, name: '俄罗斯' },
+                        { value: 4, name: '瑞典' },
+                        { value: 4, name: '西班牙' },
+                        { value: 4, name: '韩国' },
+                        { value: 3, name: '澳大利亚' },
+                        { value: 3, name: '爱尔兰' },
+                        { value: 1, name: '丹麦' },
+                        { value: 1, name: '保加利亚' },
+                        { value: 1, name: '匈牙利' },
+                        { value: 1, name: '印度尼西亚' },
+                        { value: 1, name: '塞浦路斯' },
+                        { value: 1, name: '奥地利' },
+                        { value: 1, name: '希腊' },
+                        { value: 1, name: '意大利' },
+                        { value: 1, name: '挪威' },
+                        { value: 1, name: '新西兰' },
+                        { value: 8, name: '海外其他' },
+                    ]
+                }
+            ]
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart2.setOption(option2);
+
+        // 图例开关的行为只会触发 legendselectchanged 事件
+        myChart2.on('mouseover', function (params) {
+            // 在控制台中打印
+            console.log(params.name);
+        });
+
+
+
+    </script>
+</body>
+
+</html>

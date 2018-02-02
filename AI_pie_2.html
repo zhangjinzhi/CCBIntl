@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>人工智能投资轮次分布</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <script src="./layui/layui.all.js"></script>
+  
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous">
+    <!--<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+    <!--<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+  
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/css/carousel.css" rel="stylesheet">
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="bootstrap/js/jquery-slim.min.js"><\/script>')</script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="bootstrap/js/holder.min.js"></script>
+    <script src="bootstrap/js/echarts.min.js"></script>
+    <script src="bootstrap/js/echarts.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="index.html">返回首页</a>
+                <a class="navbar-brand" href="AI_pie_1.html">上一页</a>
+                <a class="navbar-brand" href="AI_table_4.html">下一页</a>
+        </nav>
+      </header>
+
+    <div style="width: 100%; margin: auto; position:absolute; left:0; right:0 ;">
+
+
+            <div style="margin: auto;text-align: center;">
+            <h4 style="margin: 4% 0px 0px 0px;">人工智能投资轮次分布</h4>
+            </div>
+          <div class="row">
+            <div class="col-md-6">
+              <!--<div class="card mb-4 box-shadow">-->
+            <table id="table" class="layui-table" style="margin: 7% 0px 0px 16%; width: 60%;">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td colspan="2">项目最新轮次统计</td>
+                    </tr>
+                    <tr>
+                        <td style="width:70%">轮次</td>
+                        <td style="width:30%">次数</td>
+                    </tr>
+                    <tr>
+                        <td>上市后</td>
+                        <td>34</td>
+                    </tr>
+                    <tr>
+                        <td>上市</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>D轮</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>C轮</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>B+轮</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>B轮</td>
+                        <td>75</td>
+                    </tr>
+                    <tr>
+                        <td>Pre-B轮</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>A+轮</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>A轮</td>
+                        <td>219</td>
+                    </tr>
+                    <tr>
+                        <td>Pre-A</td>
+                        <td>79</td>
+                    </tr>
+                    <tr>
+                        <td>天使轮</td>
+                        <td>230</td>
+                    </tr>
+                    <tr>
+                        <td>种子轮轮</td>
+                        <td>80</td>
+                    </tr>
+                    <tr>
+                        <td>并购</td>
+                        <td>61</td>
+                    </tr>
+                    <tr>
+                        <td>战略投资</td>
+                        <td>22</td>
+                    </tr>
+                </tbody>
+            </table>
+              <!--</div>-->
+            </div>
+            <div class="col-md-6">
+              <!--<div class="card mb-4 box-shadow">-->
+                <div style="width: 100%; ;margin: 16% 0% 0px 0px;">
+            <div id="chart" style="width: 100%;  height: 500px; float:left;"></div>
+                </div>
+              <!--</div>-->
+            </div>
+          </div>
+
+    <script type="text/javascript">
+
+        myChart2 = echarts.init(document.getElementById('chart'));
+        option = {
+            title: {
+
+                x: 'left',
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                type: 'scroll',
+                orient: 'vertical',
+                right: 10,
+                top: 20,
+                bottom: 20,
+                selected: ['上市后', '上市', 'D轮', 'C轮', 'B+轮', 'B轮', 'Pre-B轮', 'A+轮', 'A轮', 'Pre-A轮', '天使轮', '种子轮', '并购', '战略投资']
+            },
+            series: [
+                {
+                    name: '轮次',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['40%', '50%'],
+                    data: [
+                        { value: 34, name: '上市后' },
+                        { value: 8, name: '上市' },
+                        { value: 23, name: 'D轮' },
+                        { value: 21, name: 'C轮' },
+                        { value: 4, name: 'B+轮' },
+                        { value: 75, name: 'B轮' },
+                        { value: 2, name: 'Pre-B轮' },
+                        { value: 16, name: 'A+轮' },
+                        { value: 219, name: 'A轮' },
+                        { value: 79, name: 'Pre-A轮' },
+                        { value: 230, name: '天使轮' },
+                        { value: 80, name: '种子轮' },
+                        { value: 61, name: '并购' },
+                        { value: 22, name: '战略投资' },
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart2.setOption(option);
+
+    </script>
+</body>
+
+</html>

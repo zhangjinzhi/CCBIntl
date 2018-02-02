@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>人工智能行业</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+    <!--<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/css/carousel.css" rel="stylesheet">
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="bootstrap/js/jquery-slim.min.js"><\/script>')</script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="bootstrap/js/holder.min.js"></script>
+    <script src="bootstrap/js/echarts.min.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html">返回首页</a>
+        <a class="navbar-brand" href="AI_table.html">下一页</a>
+      </nav>
+    </header>
+
+    <h3 style="width:100%;text-align:center;margin-top: 5%;">人工智能行业概况</h3>
+    <h4 style="margin-top: 5%;margin-left: 5%;">人工智能行业</h4>
+
+    <!--<div id="container" style="height:1100px;width:90%; margin: auto; position:absolute; left:0; right:0 ;" ></div>-->
+ <div class="row">
+  <div class="span12">
+    <div id="container" style="height:1100px;width:90%; margin-left:5%; position:absolute; ;" ></div>
+  </div>
+   </div>
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        myChart.showLoading();
+        $(function()  {
+            var data = {
+          "name": "AI",
+          "children": [{
+            "name": "基础层",
+            "children": [{
+              "name": "AI芯片",
+              "value": ""
+            }, {
+              "name": "传感器/中间件",
+              "value": ""
+            }, {
+              "name": "数据库",
+              "value": ""
+            }]
+          }, {
+            "name": "技术层",
+            "children": [{
+              "name": "深度学习",
+              "value": ""
+            }, {
+              "name": "计算机视觉",
+              "value": ""
+            }, {
+              "name": "自然语言处理",
+              "value": ""
+            }]
+          }, {
+            "name": "通用应用层",
+            "children": [{
+              "name": "语义识别",
+              "value": ""
+            }, {
+              "name": "图像识别",
+              "value": ""
+            }, {
+              "name": "语音识别",
+              "value": ""
+            }, {
+              "name": "人脸识别",
+              "value": ""
+            }, {
+              "name": "视频识别",
+              "value": ""
+            }, {
+              "name": "身份识别",
+              "value": ""
+            }, {
+              "name": "审问识别",
+              "value": ""
+            }, {
+              "name": "首饰识别",
+              "value": ""
+            }, {
+              "name": "指纹识别",
+              "value": ""
+            }, {
+              "name": "虹膜识别",
+              "value": ""
+            }, {
+              "name": "静脉识别",
+              "value": ""
+            }, {
+              "name": "文字识别",
+              "value": ""
+            }, {
+              "name": "掌纹识别",
+              "value": ""
+            }]
+          }, {
+            "name": "行业应用层",
+            "children": [{
+              "name": "AI医疗",
+              "value": ""
+            }, {
+              "name": "AI安防",
+              "value": ""
+            }, {
+              "name": "AI教育",
+              "value": ""
+            }, {
+              "name": "智能家居",
+              "value": ""
+            }, {
+              "name": "智能投顾",
+              "value": ""
+            }, {
+              "name": "AI金融",
+              "value": ""
+            }, {
+              "name": "自动驾驶",
+              "value": ""
+            }, {
+              "name": "聊天机器人",
+              "value": ""
+            }, {
+              "name": "安防监控",
+              "value": ""
+            }, {
+              "name": "安防机器人",
+              "value": ""
+            }]
+          }]
+        };
+            myChart.hideLoading();
+
+            myChart.setOption(option = {
+                tooltip: {
+                    trigger: 'item',
+                    triggerOn: 'mousemove'
+                },
+                series: [
+                    {
+                        type: 'tree',
+
+                        data: [data],
+
+                        top: '7%',
+                        left: '7%',
+                        bottom: '5%',
+                        right: '5%',
+                        symbol: 'emptyCircle',
+                        orient: 'horizontal',
+                        symbolSize: 15,
+
+                        label: {
+                            normal: {
+                                position: 'left',
+                                verticalAlign: 'middle',
+                                align: 'right',
+                                fontSize: 15
+                            }
+                        },
+
+                        leaves: {
+                            label: {
+                                normal: {
+                                    position: 'right',
+                                    verticalAlign: 'middle',
+                                    align: 'left'
+                                }
+                            }
+                        },
+                        
+                        expandAndCollapse: true,
+                        animationDuration: 550,
+                        animationDurationUpdate: 750
+                    }
+                ]
+            });
+        });;
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+  </body>
+</html>
