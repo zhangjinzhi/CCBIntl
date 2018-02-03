@@ -45,107 +45,17 @@
           </header>
       <h3 style="width:100%;text-align:center;margin-top: 5%;">全球优质项目搜寻与扫描</h3>
       <h4 style="width:100%;text-align:center;margin:4% 0px 3% 0px;">概览</h4>
+      
 
+      <div style="width:100%;display:block;text-align:center;margin-top: 10%;">
+          <ul style="list-style: none;padding:0;" >
+                <li style="font-size:35px;">1679个项目</li>
+                <li style="font-size:30px;">超过30个国家和地区</li>
+                <li style="font-size:35px;">29个细分赛道 </li>
+                <li style="font-size:30px;">1626家投资机构（投资人）</li>
+                <li style="font-size:33px;">超过1000次融资事件</li>
+        </ul>
+      </div>
       <!--<h4 style="margin-top: 5%;margin-left: 5%;">概览</h4>-->
-      <div id='main' ></div>
-      <script>
-          var chart = echarts.init(document.getElementById('main'));
-
-          var option = {
-              tooltip: {},
-              series: [ {
-                  type: 'wordCloud',
-                  gridSize: 2,
-                  sizeRange: [60,80],
-                  rotationRange: [0, 0],
-                  shape: 'pentagon',
-                  width: 600,
-                  height: 400,
-                  drawOutOfBound: true,
-                  textStyle: {
-                      normal: {
-                          color: function () {
-                              return 'rgb(' + [
-                                  Math.round(Math.random() * 160),
-                                  Math.round(Math.random() * 160),
-                                  Math.round(Math.random() * 160)
-                              ].join(',') + ')';
-                          }
-                      },
-                      emphasis: {
-                          shadowBlur: 10,
-                          shadowColor: '#333'
-                      }
-                  },
-                  data: [
-                      {
-                          name: '1679个项目',
-                          value: 1679,
-                          textStyle: {
-                              normal: {
-                                  color: 'black'
-                              },
-                              emphasis: {
-                                  color: 'red'
-                              }
-                          }
-                      },
-                      {
-                          name: '超过30个国家和地区',
-                          value: 30,
-                          textStyle: {
-                              normal: {
-                                  color: 'black'
-                              },
-                              emphasis: {
-                                  color: 'yellow'
-                              }
-                          }
-                      },
-                      {
-                          name: '29个细分赛道',
-                          value: 29,
-                          textStyle: {
-                              normal: {
-                                  color: 'black'
-                              },
-                              emphasis: {
-                                  color: '#7fb80e'
-                              }
-                          }
-                      },
-                      {
-                          name: '1626家投资机构（投资人）',
-                          value: 1626,
-                          textStyle: {
-                              normal: {
-                                  color: 'black'
-                              },
-                              emphasis: {
-                                  color: '#102b6a'
-                              }
-                          }
-                      },
-                      {
-                          name: '超过1000次融资事件',
-                          value: 1000,
-                          textStyle: {
-                              normal: {
-                                  color: 'black'
-                              },
-                              emphasis: {
-                                  color: '#009ad6'
-                              }
-                          }
-                      },
-
-                  ]
-              } ]
-          };
-
-          chart.setOption(option);
-
-          window.onresize = chart.resize;
-      </script>
   </body>
 </html>

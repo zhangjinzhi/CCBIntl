@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>人工智能全球优质项目概览</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+    <!--<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/css/carousel.css" rel="stylesheet">
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="bootstrap/js/jquery-slim.min.js"><\/script>')</script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="bootstrap/js/holder.min.js"></script>
+    <script src="bootstrap/js/echarts.min.js"></script>
+    <script src="bootstrap/js/echarts-wordcloud.js"></script>
+  </head>
+  <body>
+      <style>
+          html, body, #main {
+              width: 100%;
+              height: 100%;
+              margin:0;
+          }
+      </style>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="index.html">返回首页</a>
+                <a class="navbar-brand" href="AI_table_3.html">上一页</a>
+                <a class="navbar-brand"href="AI_pie_1.html">下一页</a>
+            </nav>
+          </header>
+      <h3 style="width:100%;text-align:center;margin-top: 5%;">全球优质项目搜寻与扫描</h3>
+      <h4 style="width:100%;text-align:center;margin:4% 0px 3% 0px;">概览</h4>
+
+      <!--<h4 style="margin-top: 5%;margin-left: 5%;">概览</h4>-->
+      <div id='main' ></div>
+      <script>
+          var chart = echarts.init(document.getElementById('main'));
+
+          var option = {
+              tooltip: {},
+              series: [ {
+                  type: 'wordCloud',
+                  gridSize: 2,
+                  sizeRange: [60,80],
+                  rotationRange: [0, 0],
+                  shape: 'pentagon',
+                  width: 600,
+                  height: 400,
+                  drawOutOfBound: true,
+                  textStyle: {
+                      normal: {
+                          color: function () {
+                              return 'rgb(' + [
+                                  Math.round(Math.random() * 160),
+                                  Math.round(Math.random() * 160),
+                                  Math.round(Math.random() * 160)
+                              ].join(',') + ')';
+                          }
+                      },
+                      emphasis: {
+                          shadowBlur: 10,
+                          shadowColor: '#333'
+                      }
+                  },
+                  data: [
+                      {
+                          name: '1679个项目',
+                          value: 1679,
+                          textStyle: {
+                              normal: {
+                                  color: 'black'
+                              },
+                              emphasis: {
+                                  color: 'red'
+                              }
+                          }
+                      },
+                      {
+                          name: '超过30个国家和地区',
+                          value: 30,
+                          textStyle: {
+                              normal: {
+                                  color: 'black'
+                              },
+                              emphasis: {
+                                  color: 'yellow'
+                              }
+                          }
+                      },
+                      {
+                          name: '29个细分赛道',
+                          value: 29,
+                          textStyle: {
+                              normal: {
+                                  color: 'black'
+                              },
+                              emphasis: {
+                                  color: '#7fb80e'
+                              }
+                          }
+                      },
+                      {
+                          name: '1626家投资机构（投资人）',
+                          value: 1626,
+                          textStyle: {
+                              normal: {
+                                  color: 'black'
+                              },
+                              emphasis: {
+                                  color: '#102b6a'
+                              }
+                          }
+                      },
+                      {
+                          name: '超过1000次融资事件',
+                          value: 1000,
+                          textStyle: {
+                              normal: {
+                                  color: 'black'
+                              },
+                              emphasis: {
+                                  color: '#009ad6'
+                              }
+                          }
+                      },
+
+                  ]
+              } ]
+          };
+
+          chart.setOption(option);
+
+          window.onresize = chart.resize;
+      </script>
+  </body>
+</html>
